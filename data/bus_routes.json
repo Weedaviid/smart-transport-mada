@@ -1,0 +1,56 @@
+{
+  "bus_routes": [
+    {
+      "line_id": "line_1",
+      "line_name": "Ligne 1: Analakely - Anosy",
+      "segments": [
+        {
+          "from": "Analakely Bus Stop",
+          "to": "Soarano Bus Stop",
+          "distance_km": 0.8,
+          "stop_time_minutes": 1
+        },
+        {
+          "from": "Soarano Bus Stop",
+          "to": "Mahamasina Bus Stop",
+          "distance_km": 1.5,
+          "stop_time_minutes": 1
+        },
+        {
+          "from": "Mahamasina Bus Stop",
+          "to": "Anosy Bus Stop",
+          "distance_km": 0.9,
+          "stop_time_minutes": 1
+        }
+      ]
+    },
+    {
+      "line_id": "line_2",
+      "line_name": "Ligne 2: Kininina - Ampasampito",
+      "segments": [
+        {
+          "from": "Kininina Ambohimirary",
+          "to": "Meteo Ampasapito",
+          "distance_km": 0.5,
+          "stop_time_minutes": 1
+        },
+        {
+          "from": "Meteo Ampasapito",
+          "to": "Rond Point Ampasapito",
+          "distance_km": 0.4,
+          "stop_time_minutes": 1
+        },
+        {
+          "from": "Rond Point Ampasapito",
+          "to": "Vingt Trois Ampasampito",
+          "distance_km": 0.3,
+          "stop_time_minutes": 1
+        }
+      ]
+    }
+  ],
+  "fare": {
+    "price_ar": 600,
+    "description": "Tarif unique pour tout trajet en bus"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "bus_stops": [
+    {
+      "id": 1,
+      "name": "Analakely Bus Stop",
+      "lat": -18.9087,
+      "lon": 47.5253,
+      "description": "Arrêt principal au centre d'Analakely"
+    },
+    {
+      "id": 2,
+      "name": "Soarano Bus Stop",
+      "lat": -18.9073,
+      "lon": 47.5189,
+      "description": "Arrêt près de la gare de Soarano"
+    },
+    {
+      "id": 3,
+      "name": "Mahamasina Bus Stop",
+      "lat": -18.9130,
+      "lon": 47.5315,
+      "description": "Arrêt au stade de Mahamasina"
+    },
+    {
+      "id": 4,
+      "name": "Anosy Bus Stop",
+      "lat": -18.9171,
+      "lon": 47.5273,
+      "description": "Arrêt à Anosy, près du lac"
+    },
+    {
+      "id": 5,
+      "name": "Kininina Ambohimirary",
+      "lat": -18.9007,
+      "lon": 47.5452,
+      "description": "Arrêt à Ambohimirary"
+    },
+    {
+      "id": 6,
+      "name": "Meteo Ampasapito",
+      "lat": -18.8986,
+      "lon": 47.5426,
+      "description": "Arrêt près de la Météo Ampasapito"
+    },
+    {
+      "id": 7,
+      "name": "Rond Point Ampasapito",
+      "lat": -18.8979,
+      "lon": 47.5418,
+      "description": "Arrêt au rond-point d'Ampasapito"
+    },
+    {
+      "id": 8,
+      "name": "Vingt Trois Ampasampito",
+      "lat": -18.8965,
+      "lon": 47.5433,
+      "description": "Arrêt au quartier 23 Ampasampito"
+    }
+  ]
+}

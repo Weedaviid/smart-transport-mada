@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransMad - Système de Transport à Madagascar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- En-tête -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-emoji">🗺️</span>
+                    <h1>TransMad</h1>
+                </div>
+                <p class="tagline">Trouvez votre meilleur trajet à Madagascar</p>
+            </div>
+        </header>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <!-- Section de recherche (Étape 1) -->
+            <section class="search-section">
+                <div class="section-title">
+                    <span class="step-badge">1</span>
+                    <h2>Où allez-vous?</h2>
+                </div>
+                
+                <div class="search-form">
+                    <div class="input-group">
+                        <label for="departure">Lieu de départ</label>
+                        <select id="departure" class="input-field">
+                            <option value="">Sélectionnez votre départ...</option>
+                        </select>
+                    </div>
+
+                    <div class="swap-btn">
+                        <button id="swapBtn" title="Inverser les villes" aria-label="Inverser">⇅</button>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="destination">Lieu d'arrivée</label>
+                        <select id="destination" class="input-field">
+                            <option value="">Sélectionnez votre destination...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Options d'optimisation -->
+                <div class="optimization-options">
+                    <div class="section-title">
+                        <span class="step-badge">2</span>
+                        <h2>Qu'est-ce qui est important pour vous?</h2>
+                    </div>
+
+                    <div class="options-grid">
+                        <button class="option-btn active" data-optimization="distance">
+                            <span class="option-emoji">📍</span>
+                            <span class="option-text">Trajet le plus court</span>
+                        </button>
+                        <button class="option-btn" data-optimization="duration">
+                            <span class="option-emoji">⏱️</span>
+                            <span class="option-text">Temps optimisé</span>
+                        </button>
+                        <button class="option-btn" data-optimization="price">
+                            <span class="option-emoji">💰</span>
+                            <span class="option-text">Prix le moins cher</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Presets de trajets -->
+                <div class="presets-section">
+                    <div class="section-title">
+                        <span class="step-badge">⭐</span>
+                        <h2>Trajets populaires (presets)</h2>
+                    </div>
+                    <div class="presets-grid">
+                        <button class="preset-btn" data-preset="analakely-ivato">
+                            <span class="preset-emoji">✈️</span>
+                            <span class="preset-text">Analakely → Ivato (Aéroport)</span>
+                            <span class="preset-distance">~14 km</span>
+                        </button>
+                        <button class="preset-btn" data-preset="analakely-ambatobe">
+                            <span class="preset-emoji">🏪</span>
+                            <span class="preset-text">Analakely → Ambatobe</span>
+                            <span class="preset-distance">~7 km</span>
+                        </button>
+                        <button class="preset-btn" data-preset="isoraka-ivandry">
+                            <span class="preset-emoji">🏢</span>
+                            <span class="preset-text">Isoraka → Ivandry</span>
+                            <span class="preset-distance">~6 km</span>
+                        </button>
+                        <button class="preset-btn" data-preset="anosy-talatamaty">
+                            <span class="preset-emoji">🚗</span>
+                            <span class="preset-text">Anosy → Talatamaty</span>
+                            <span class="preset-distance">~13 km</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bouton recherche -->
+                <button id="searchBtn" class="btn-primary">
+                    <span class="btn-icon">🔍</span>
+                    Trouver mon trajet
+                </button>
+            </section>
+
+            <!-- Résultats (Étape 3) -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="section-title">
+                    <span class="step-badge">3</span>
+                    <h2>Voici votre trajet optimal</h2>
+                </div>
+
+                <!-- Carte du trajet -->
+                <div class="map-container">
+                    <div id="routeMap" class="route-map"></div>
+                </div>
+
+                <!-- Résumé du trajet -->
+                <div class="route-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">📍 Distance totale</span>
+                        <span class="summary-value" id="totalDistance">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">⏱️ Durée estimée</span>
+                        <span class="summary-value" id="totalDuration">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">💰 Prix moyen</span>
+                        <span class="summary-value" id="totalPrice">-</span>
+                    </div>
+                </div>
+
+                <!-- Segments du trajet -->
+                <div class="route-path">
+                    <h3>Votre itinéraire</h3>
+                    <div id="pathContainer"></div>
+                </div>
+
+                <!-- Transport recommandé -->
+                <div class="recommendations-container">
+                    <div class="recommendation-card">
+                        <h3>🚗 Transport recommandé (le moins cher)</h3>
+                        <div id="cheapestTransportInfo"></div>
+                    </div>
+
+                    <!-- Comparaison des transports -->
+                    <div class="recommendation-card">
+                        <h3>🔄 Tous les transports disponibles</h3>
+                        <div id="transportComparison"></div>
+                    </div>
+                </div>
+
+                <!-- Optimisation du temps -->
+                <div class="optimization-card">
+                    <h3>⚡ Optimisation du temps</h3>
+                    <div id="timeOptimization"></div>
+                </div>
+
+                <!-- Bouton retour -->
+                <button id="newSearchBtn" class="btn-secondary">
+                    <span class="btn-icon">🔄</span>
+                    Nouvelle recherche
+                </button>
+            </section>
+
+            <!-- État de chargement -->
+            <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Calcul de votre meilleur trajet...</p>
+            </div>
+
+            <!-- Messages d'erreur -->
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+            <!-- Message d'information -->
+            <div class="info-message" id="infoMessage" style="display: none;"></div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer class="footer">
+            <p>TransMad © 2024 - Système de transport intelligent pour Madagascar</p>
+            <a href="/docs" class="footer-link">📖 Documentation des algorithmes</a>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/routing-config.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

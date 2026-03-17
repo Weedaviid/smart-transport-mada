@@ -1,0 +1,76 @@
+{
+  "transports": [
+    {
+      "id": "taxi-brousse",
+      "name": "Taxi-brousse",
+      "description": "Transport collectif rapide pour longues distances",
+      "speed_kmh": 40,
+      "time_per_km_minutes": 1.5,
+      "price_per_km": 2000,
+      "capacity": 15,
+      "comfort": "moyen",
+      "availability": "élevée"
+    },
+    {
+      "id": "taxi",
+      "name": "Taxi",
+      "description": "Transport privé confortable",
+      "speed_kmh": 30,
+      "time_per_km_minutes": 2.0,
+      "price_per_km": 5000,
+      "capacity": 4,
+      "comfort": "élevé",
+      "availability": "élevée"
+    },
+    {
+      "id": "moto-taxi",
+      "name": "Moto-taxi",
+      "description": "Transport rapide et agile dans le trafic",
+      "speed_kmh": 25,
+      "time_per_km_minutes": 2.4,
+      "price_per_km": 3000,
+      "capacity": 2,
+      "comfort": "faible",
+      "availability": "très élevée"
+    },
+    {
+      "id": "pousse-pousse",
+      "name": "Pousse-pousse",
+      "description": "Transport traditionnel pour courtes distances",
+      "speed_kmh": 8,
+      "time_per_km_minutes": 7.5,
+      "price_per_km": 1500,
+      "capacity": 2,
+      "comfort": "faible",
+      "availability": "moyenne"
+    },
+    {
+      "id": "bus",
+      "name": "Bus public",
+      "description": "Transport en commun économique avec tarif unique",
+      "speed_kmh": 20,
+      "time_per_km_minutes": 3.0,
+      "price_per_km": 0,
+      "price_fixed": 600,
+      "capacity": 40,
+      "comfort": "faible",
+      "availability": "moyenne",
+      "fixed_routes": true,
+      "stop_time_minutes": 1
+    },
+    {
+      "id": "walk",
+      "name": "À pied",
+      "description": "Marche à pied gratuite",
+      "speed_kmh": 3,
+      "speed_m_per_min": 50,
+      "time_per_km_minutes": 20.0,
+      "price_per_km": 0,
+      "price_fixed": 0,
+      "capacity": 1,
+      "comfort": "variable",
+      "availability": "toujours",
+      "eco_friendly": true
+    }
+  ]
+}

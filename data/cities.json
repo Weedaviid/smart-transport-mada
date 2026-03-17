@@ -1,0 +1,109 @@
+{
+  "cities": [
+    {
+      "id": "analakely",
+      "name": "Analakely",
+      "latitude": -18.9067075792458,
+      "longitude": 47.52638894151368,
+      "description": "Centre commercial d'Antananarivo"
+    },
+    {
+      "id": "antaninarenina",
+      "name": "Antaninarenina",
+      "latitude": -18.909727431290452,
+      "longitude": 47.52500764350004,
+      "description": "Quartier résidentiel"
+    },
+    {
+      "id": "isoraka",
+      "name": "Isoraka",
+      "latitude": -18.91238136510972,
+      "longitude": 47.52046644927984,
+      "description": "Quartier proche du centre"
+    },
+    {
+      "id": "anosy",
+      "name": "Anosy",
+      "latitude": -18.915158768207714, 
+      "longitude": 47.52074161717226,
+      "description": "Zone commerciale et administrative"
+    },
+    {
+      "id": "ambohijatovo",
+      "name": "Ambohijatovo",
+      "latitude": -18.912467603308404,
+      "longitude": 47.52975493471637,
+      "description": "Quartier universitaire"
+    },
+    {
+      "id": "ankorondrano",
+      "name": "Ankorondrano",
+      "latitude": -18.89114233657577,
+      "longitude": 47.52361841228587,
+      "description": "Quartier résidentiel nord"
+    },
+    {
+      "id": "ivandry",
+      "name": "Ivandry",
+      "latitude": -18.875246778080186,
+      "longitude": 47.521130176260066,
+      "description": "Quartier résidentiel haut standing"
+    },
+    {
+      "id": "andraharo",
+      "name": "Andraharo",
+      "latitude": -18.881396725837824,
+      "longitude": 47.50582684499935,
+      "description": "Zone résidentielle"
+    },
+    {
+      "id": "ambatobe",
+      "name": "Ambatobe",
+      "latitude":  -18.87500615072488,
+      "longitude": 47.55547612509695,
+      "description": "Zone d'activités commerciales"
+    },
+    {
+      "id": "ankadifotsy",
+      "name": "Ankadifotsy",
+      "latitude": -18.895164120944173,
+      "longitude": 47.524100669665756,
+      "description": "Quartier central"
+    },
+    {
+      "id": "67ha",
+      "name": "67ha",
+      "latitude": -18.90885468254817, 
+      "longitude": 47.54523795272412,
+      "description": "Zone résidentielle est"
+    },
+    {
+      "id": "ambohimanarina",
+      "name": "Ambohimanarina",
+      "latitude": -18.8735,
+      "longitude": 47.4812,
+      "description": "Quartier périphérique ouest"
+    },
+    {
+      "id": "itaosy",
+      "name": "Itaosy",
+      "latitude": -18.9155,
+      "longitude": 47.4492,
+      "description": "Zone périphérique sud-ouest"
+    },
+    {
+      "id": "talatamaty",
+      "name": "Talatamaty",
+      "latitude": -18.8147,
+      "longitude": 47.4841,
+      "description": "Zone proche aéroport"
+    },
+    {
+      "id": "ivato",
+      "name": "Ivato",
+      "latitude": -18.7987,
+      "longitude": 47.4789,
+      "description": "Zone aéroportuaire"
+    }
+  ]
+}

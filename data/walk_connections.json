@@ -1,0 +1,28 @@
+{
+  "walk_connections": [
+    {
+      "from": "Analakely",
+      "to": "Analakely Bus Stop",
+      "distance_km": 0.2,
+      "description": "Marche depuis le centre d'Analakely vers l'arrêt de bus"
+    },
+    {
+      "from": "Ankorondrano",
+      "to": "Soarano Bus Stop",
+      "distance_km": 1.1,
+      "description": "Marche depuis Ankorondrano vers l'arrêt Soarano"
+    },
+    {
+      "from": "Ivandry",
+      "to": "Meteo Ampasapito",
+      "distance_km": 1.5,
+      "description": "Marche depuis Ivandry vers l'arrêt Météo Ampasapito"
+    },
+    {
+      "from": "Ambatobe",
+      "to": "Vingt Trois Ampasampito",
+      "distance_km": 1.8,
+      "description": "Marche depuis Ambatobe vers l'arrêt 23 Ampasampito"
+    }
+  ]
+}

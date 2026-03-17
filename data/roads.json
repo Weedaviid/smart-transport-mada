@@ -1,0 +1,172 @@
+{
+  "roads": [
+    {
+      "from": "analakely",
+      "to": "antaninarenina",
+      "distance_km": 0.5,
+      "road_type": "urban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "analakely",
+      "to": "ankadifotsy",
+      "distance_km": 1.8,
+      "road_type": "urban",
+      "traffic_factor": 1.3
+    },
+    {
+      "from": "analakely",
+      "to": "isoraka",
+      "distance_km": 0.9,
+      "road_type": "urban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "antaninarenina",
+      "to": "isoraka",
+      "distance_km": 0.5,
+      "road_type": "urban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "antaninarenina",
+      "to": "ambohijatovo",
+      "distance_km": 0.6,
+      "road_type": "urban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "isoraka",
+      "to": "ambohijatovo",
+      "distance_km": 0.3,
+      "road_type": "urban",
+      "traffic_factor": 1.0
+    },
+    {
+      "from": "isoraka",
+      "to": "anosy",
+      "distance_km": 0.6,
+      "road_type": "urban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "ambohijatovo",
+      "to": "anosy",
+      "distance_km": 0.5,
+      "road_type": "urban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "ankadifotsy",
+      "to": "67ha",
+      "distance_km": 1.7,
+      "road_type": "urban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "ankadifotsy",
+      "to": "ankorondrano",
+      "distance_km": 2.5,
+      "road_type": "urban",
+      "traffic_factor": 1.4
+    },
+    {
+      "from": "ankorondrano",
+      "to": "ivandry",
+      "distance_km": 2.0,
+      "road_type": "urban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "ankorondrano",
+      "to": "andraharo",
+      "distance_km": 1.2,
+      "road_type": "urban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "ivandry",
+      "to": "67ha",
+      "distance_km": 2.5,
+      "road_type": "urban",
+      "traffic_factor": 1.3
+    },
+    {
+      "from": "ivandry",
+      "to": "ambatobe",
+      "distance_km": 3.2,
+      "road_type": "urban",
+      "traffic_factor": 1.4
+    },
+    {
+      "from": "andraharo",
+      "to": "ambohimanarina",
+      "distance_km": 3.5,
+      "road_type": "suburban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "andraharo",
+      "to": "talatamaty",
+      "distance_km": 7.8,
+      "road_type": "suburban",
+      "traffic_factor": 1.0
+    },
+    {
+      "from": "talatamaty",
+      "to": "ivato",
+      "distance_km": 2.2,
+      "road_type": "highway",
+      "traffic_factor": 0.9
+    },
+    {
+      "from": "talatamaty",
+      "to": "ambohimanarina",
+      "distance_km": 6.5,
+      "road_type": "suburban",
+      "traffic_factor": 1.1
+    },
+    {
+      "from": "ambohimanarina",
+      "to": "itaosy",
+      "distance_km": 5.8,
+      "road_type": "suburban",
+      "traffic_factor": 1.2
+    },
+    {
+      "from": "itaosy",
+      "to": "ankadifotsy",
+      "distance_km": 7.2,
+      "road_type": "urban",
+      "traffic_factor": 1.5
+    },
+    {
+      "from": "itaosy",
+      "to": "anosy",
+      "distance_km": 8.5,
+      "road_type": "urban",
+      "traffic_factor": 1.6
+    },
+    {
+      "from": "67ha",
+      "to": "ambatobe",
+      "distance_km": 2.8,
+      "road_type": "urban",
+      "traffic_factor": 1.3
+    },
+    {
+      "from": "anosy",
+      "to": "67ha",
+      "distance_km": 2.8,
+      "road_type": "urban",
+      "traffic_factor": 1.4
+    },
+    {
+      "from": "analakely",
+      "to": "67ha",
+      "distance_km": 2.5,
+      "road_type": "urban",
+      "traffic_factor": 1.3
+    }
+  ]
+}
