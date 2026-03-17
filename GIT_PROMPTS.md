@@ -1,77 +1,99 @@
-# Prompts Git utiles (FR)
+# Guide Git pratique (FR)
 
-Copie-colle ces prompts quand tu veux te faire guider rapidement.
+Ce fichier contient les lignes a taper dans le terminal et ce qu'elles font.
 
-## 1) Démarrer une nouvelle fonctionnalité en branche
+## 1) Demarrer une nouvelle branche
 
-```text
-Aide-moi à créer une nouvelle branche Git pour une fonctionnalité nommée <nom-feature>, puis donne-moi les commandes pour push la branche sur GitHub.
-```
+	git pull origin main
 
-## 2) Voir ce qui a changé avant commit
+Recupere les derniers changements de la branche principale avant de commencer.
 
-```text
-Montre-moi les commandes Git pour vérifier les fichiers modifiés, voir le diff, et décider quoi ajouter au commit.
-```
+	git checkout -b feature/ma-feature
 
-## 3) Commit propre avec bon message
+Cree une nouvelle branche et bascule dessus.
 
-```text
-Propose-moi un message de commit clair (style Conventional Commits) pour mes changements, puis donne les commandes git add/commit.
-```
+	git push -u origin feature/ma-feature
 
-## 4) Mettre a jour ma branche locale
+Publie la branche sur GitHub et memorise la destination de push pour la suite.
 
-```text
-Je suis sur la branche <nom-branche>. Donne-moi les commandes pour recuperer les changements distants sans casser mon historique.
-```
+## 2) Voir les changements en cours
 
-## 5) Push mes changements
+	git status
 
-```text
-Donne-moi les commandes pour pousser ma branche actuelle vers GitHub (premier push et push suivants).
-```
+Affiche les fichiers modifies, ajoutes ou non suivis.
 
-## 6) Resoudre un rejet de push (fetch first)
+	git diff
 
-```text
-J'ai l'erreur "failed to push some refs" ou "fetch first". Guide-moi pas a pas pour corriger sans perdre mes changements.
-```
+Affiche les differences non ajoutees au commit.
 
-## 7) Revenir en arriere en securite
+	git diff --staged
 
-```text
-Explique-moi la difference entre git restore, git reset, et git revert, puis donne la bonne commande pour annuler <cas exact>.
-```
+Affiche les differences deja ajoutees au commit.
 
-## 8) Ouvrir une Pull Request
+## 3) Committer tes modifications
 
-```text
-Je viens de pousser la branche <nom-branche>. Donne-moi le workflow pour ouvrir une Pull Request propre vers main.
-```
+	git add .
 
-## 9) Workflow quotidien (checklist)
+Ajoute tous les changements au prochain commit.
 
-```text
-Donne-moi une checklist Git quotidienne en 6 etapes: update, coder, verifier, commit, push, PR.
-```
+	git commit -m "feat: description courte"
 
-## 10) Aide diagnostique rapide
+Cree un commit avec un message clair.
 
-```text
-Je te donne la sortie de git status et git log --oneline --decorate -n 10. Dis-moi exactement quoi faire ensuite.
-```
+## 4) Mettre a jour ta branche avant push
 
----
+	git pull --rebase origin main
 
-## Commandes de base (rappel rapide)
+Rejoue tes commits locaux au-dessus de la version distante la plus recente pour garder un historique propre.
 
-```bash
-git pull origin main
-git checkout -b feature/ma-feature
-# coder...
-git status
-git add .
-git commit -m "feat: ma nouvelle feature"
-git push -u origin feature/ma-feature
-```
+## 5) Envoyer ton travail sur GitHub
+
+	git push
+
+Envoie tes commits vers la branche distante associee.
+
+	git push origin main
+
+Envoie explicitement vers main quand tu travailles directement sur main.
+
+## 6) Corriger un rejet de push (fetch first)
+
+	git pull --rebase origin main
+
+Integre les changements distants avant de pousser.
+
+	git push origin main
+
+Renvoie tes commits apres integration.
+
+Si Git signale un conflit:
+
+	git add .
+	git rebase --continue
+
+Marque les conflits comme resolus puis continue le rebase.
+
+## 7) Annuler proprement selon le besoin
+
+	git restore nom_fichier
+
+Annule les changements non commits d'un fichier.
+
+	git reset --soft HEAD~1
+
+Annule le dernier commit en gardant les changements dans la zone de travail.
+
+	git revert <hash_commit>
+
+Cree un nouveau commit qui annule un commit deja publie.
+
+## 8) Workflow quotidien recommande
+
+	git pull origin main
+	git checkout -b feature/ma-feature
+	git status
+	git add .
+	git commit -m "feat: ma fonctionnalite"
+	git push -u origin feature/ma-feature
+
+Sequence simple pour travailler proprement et publier sans surprise.
